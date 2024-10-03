@@ -11,8 +11,11 @@ public class Subsequence {
 
 //        subSeqASCII("", "abc");
 
-        ArrayList<String> seq = subSeqAsciiReturn("", "abc");
-        System.out.println(seq);
+//        ArrayList<String> seq = subSeqAsciiReturn("", "abc");
+//        System.out.println(seq);
+
+        System.out.println(repeatedSubstringPattern("aba"));
+
     }
 
     static void subSeq(String processed, String unProcessed) {
@@ -72,6 +75,41 @@ public class Subsequence {
         first.addAll(second);
         first.addAll(third);
         return first;
+    }
+
+
+//    Leetcode Temp
+public static boolean repeatedSubstringPattern(String s) {
+    ArrayList<String> sub = subSequence("", s);
+    for(int i = 0; i < sub.size(); i++){
+        String newStr = sub.get(i);
+        while(newStr.length() <= s.length()){
+            if(s.compareTo(newStr) == 0){
+                return true;
+            }
+            System.out.print(newStr);
+            newStr += newStr;
+        }
+        System.out.println();
+    }
+    return false;
+}
+
+    static ArrayList<String> subSequence(String p, String u){
+        if(u.isEmpty()){
+            ArrayList<String> list = new ArrayList<>();
+            if(p != " "){
+                list.add(p);
+            }
+            return list;
+        }
+
+        char ch = u.charAt(0);
+        ArrayList<String> left = subSequence(p + ch, u.substring(1));
+        ArrayList<String> right = subSequence(p, u.substring(1));
+
+        left.addAll(right);
+        return left;
     }
 
 }

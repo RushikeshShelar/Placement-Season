@@ -1,4 +1,4 @@
-package StriverSDESheet.Arrays;
+package StriverSDESheet.Arrays1;
 
 //https://leetcode.com/problems/set-matrix-zeroes/
 

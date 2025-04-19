@@ -14,7 +14,7 @@ public class Subsequence {
 //        ArrayList<String> seq = subSeqAsciiReturn("", "abc");
 //        System.out.println(seq);
 
-        System.out.println(repeatedSubstringPattern("aba"));
+        System.out.println(repeatedSubstringPattern("aba "));
 
     }
 

@@ -1,6 +1,4 @@
-package capgemini;
-
-import java.util.Arrays;
+package companys.capgemini;
 
 public class reverseString {
     public static void main(String[] args) {

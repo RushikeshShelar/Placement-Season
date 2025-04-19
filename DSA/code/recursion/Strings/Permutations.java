@@ -6,12 +6,12 @@ import java.util.ArrayList;
 public class Permutations {
     public static void main(String[] args) {
 
-        permutations("", "abcde");
+//        permutations("", "abc");
 
-        ArrayList<String> ans = permutationsArr("", "abcde");
-        System.out.println(ans);
-
-        System.out.println(permutationsCount("","abcde"));
+//        ArrayList<String> ans = permutationsArr("", "abcde");
+//        System.out.println(ans);
+//
+        System.out.println(permutationsCount("","abc"));
 
 
 
